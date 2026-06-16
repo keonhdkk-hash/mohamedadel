@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>محمد عادل مصطفى | مبرمج ومختبر اختراق</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            direction: rtl;
+            text-align: right;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #ffffff;
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 20px 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border-bottom: 2px solid;
+            border-image: linear-gradient(to right, #00ff88, #00b4d8, #ff006e) 1;
+        }
+
+        .profile-pic {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 4px solid #00ff88;
+            box-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+            margin: 0 auto 15px;
+            background: #1a1a2e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+        }
+
+        .header h1 {
+            font-size: 2.2em;
+            background: linear-gradient(to left, #00ff88, #00b4d8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
+        }
+
+        .header .title {
+            color: #00b4d8;
+            font-size: 1em;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 25px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: #00ff88;
+            box-shadow: 0 8px 30px rgba(0, 255, 136, 0.15);
+        }
+
+        .card.about h2 { color: #00ff88; }
+        .card.skills h2 { color: #00b4d8; }
+        .card.hacking h2 { color: #ff006e; }
+        .card.contact h2 { color: #ffbe0b; }
+
+        .card h2 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .skill-tag {
+            background: rgba(0, 180, 216, 0.2);
+            color: #00b4d8;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            border: 1px solid rgba(0, 180, 216, 0.4);
+        }
+
+        .hack-box {
+            background: rgba(255, 0, 110, 0.08);
+            border-right: 4px solid #ff006e;
+            padding: 15px 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 15px 0;
+            font-family: 'Courier New', monospace;
+        }
+
+        .terminal {
+            background: #0d0d0d;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            color: #00ff88;
+            overflow-x: auto;
+        }
+
+        .terminal::before {
+            content: "root@kali:~#";
+            color: #ff006e;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .command { color: #00b4d8; }
+        .output { color: #888; }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .contact-links a {
+            background: rgba(255, 190, 11, 0.15);
+            color: #ffbe0b;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 190, 11, 0.3);
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .contact-links a:hover {
+            background: #ffbe0b;
+            color: #000;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.85em;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding-right: 10px;
+            margin: 10px 0;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        .blink {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="profile-pic">👨‍💻</div>
+        <h1>محمد عادل مصطفى</h1>
+        <p class="title">مبرمج | مختبر اختراق | صائد ثغرات</p>
+    </div>
+
+    <div class="container">
+
+        <div class="card about">
+            <h2>🧑‍💼 عني</h2>
+            <p>
+                أنا <strong>محمد عادل مصطفى</strong>، مبرمج شغوف بالتكنولوجيا والأمن السيبراني. 
+                أعشق فك الشفرات واستكشاف الثغرات، وأؤمن أن المعرفة الحقيقية تبدأ من فهم كيف تُخترق الأشياء 
+                لحمايتها بشكل أفضل. البرمجة عندي مش مجرد كود، دي طريقة تفكير بتخليني أشوف العالم من زاوية مختلفة.
+            </p>
+            <p style="margin-top:10px;">
+                🎯 هدفي: أساعد الشركات والأفراد في تأمين أنظمتهم قبل ما حد يوصلها.
+            </p>
+        </div>
+
+        <div class="card skills">
+            <h2>⚙️ المهارات التقنية</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">HTML & CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Kali Linux</span>
+                <span class="skill-tag">Metasploit</span>
+                <span class="skill-tag">Burp Suite</span>
+                <span class="skill-tag">Wireshark</span>
+                <span class="skill-tag">SQL Injection</span>
+                <span class="skill-tag">XSS</span>
+                <span class="skill-tag">Network Security</span>
+                <span class="skill-tag">OSINT</span>
+            </div>
+        </div>
+
+        <div class="card hacking">
+            <h2>🛡️ الأمن السيبراني والاختراق الأخلاقي</h2>
+            
+            <div class="hack-box">
+                <strong>💡 فلسفتي:</strong> "لحماية النظام، لازم تفهم عقلية المخترق. الـ Hacker الحقيقي 
+                مش اللي يخرب، لكن اللي يكتشف الثغرة ويبلغ عنها قبل ما تستغل."
+            </div>
+
+            <p style="margin-top:15px;">
+                <strong>🔍 المجالات اللي بشتغل فيها:</strong>
+            </p>
+            <ul>
+                <li>🟢 اختبار الاختراق (Penetration Testing)</li>
+                <li>🟢 تحليل الثغرات (Vulnerability Assessment)</li>
+                <li>🟢 الهندسة الاجتماعية (Social Engineering)</li>
+                <li>🟢 فحص تطبيقات الويب (Web App Security)</li>
+            </ul>
+
+            <div class="terminal">
+                <span class="command">nmap -sV target.com</span><br>
+                <span class="output">[+] 22/tcp open ssh OpenSSH 8.2</span><br>
+                <span class="output">[+] 80/tcp open http Apache 2.4.41</span><br>
+                <span class="output">[+] 443/tcp open ssl/http Apache 2.4.41</span><br>
+                <br>
+                <span class="command">sqlmap -u "http://target.com/page.php?id=1" --dbs</span><br>
+                <span class="output">[INFO] testing connection to the target URL...</span><br>
+                <span class="output">[WARNING] the target is vulnerable!</span><br>
+                <span style="color:#ff006e;">root@kali:~# <span class="blink">▌</span></span>
+            </div>
+
+            <p style="margin-top:15px; font-size:0.9em; color:#aaa;">
+                ⚠️ <em>كل اللي فوق لأغراض تعليمية وأخلاقية فقط. بحمي ولا بأخرب.</em>
+            </p>
+        </div>
+
+        <div class="card contact">
+            <h2>📬 تواصل معي</h2>
+            <p>لو عندك مشروع، فكرة، أو حتى تحدي تقني، ابعت لي:</p>
+            <div class="contact-links">
+                <a href="mailto:mohamed.adel@email.com">📧 mohamed.adel@email.com</a>
+                <a href="#">💬 WhatsApp</a>
+                <a href="#">💼 LinkedIn</a>
+                <a href="#">🐱 GitHub</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        © 2025 محمد عادل مصطفى | صُنع بشغف المبرمج وروح المخترق الأخلاقي
+    </div>
+
+</body>
+  </html>
