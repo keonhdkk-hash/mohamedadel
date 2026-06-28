@@ -30,7 +30,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" opacity="0.08"><path d="M200 50 C180 30 150 20 140 40 C130 60 140 90 160 100 C180 110 200 120 210 140 C220 160 230 180 220 200 C210 220 190 230 180 220 C170 210 165 190 155 180 C145 170 130 165 125 180 C120 195 130 210 145 220 C160 230 180 240 195 260 C210 280 220 300 230 320 C240 340 250 360 245 380 C240 400 220 410 210 400 C200 390 195 370 185 355 C175 340 160 330 150 340 C140 350 138 370 145 385 C152 400 170 415 185 430 C200 445 215 455 225 470 C235 485 240 500 235 515 C230 530 215 540 200 535 C185 530 175 515 165 500 C155 485 140 470 130 480 C120 490 125 510 135 525 C145 540 160 555 175 560 C190 565 200 555 205 545 C210 535 210 520 205 510" fill="none" stroke="%2300ff88" stroke-width="2"/><circle cx="200" cy="60" r="15" fill="%2300ff88" opacity="0.3"/><rect x="120" y="70" width="30" height="30" fill="%23ff006e" opacity="0.2" transform="rotate(20 135 85)"/><text x="250" y="100" font-size="12" fill="%2300ff88" font-family="monospace">HACK</text><text x="80" y="200" font-size="10" fill="%2300b4d8" font-family="monospace">ROOT</text><text x="280" y="350" font-size="14" fill="%23ffbe0b" font-family="monospace">PWNED</text><text x="100" y="450" font-size="11" fill="%23ff006e" font-family="monospace">0DAY</text></svg>') center/cover no-repeat;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" opacity="0.08"><path d="M200 50 C180 30 150 20 140 40 C130 60 140 90 160 100 C180 110 200 120 210 140 C220 160 230 180 220 200 C210 220 190 230 180 220 C170 210 165 190 155 180 C145 170 130 165 125 180 C120 195 130 210 145 220 C160 230 180 240 195 260 C210 280 220 300 230 320 C240 340 250 360 245 380 C240 400 220 410 210 400 C200 390 195 370 185 355 C175 340 160 330 150 340 C140 350 138 370 145 385 C152 400 170 415 185 430 C200 445 215 455 225 470 C235 485 240 500 235 515 C230 530 215 540 200 535 C185 530 175 515 165 500 C155 485 140 470 130 480 C120 490 125 510 135 525 C145 540 160 555 175 560 C190 565 200 555 205 545 C210 535 210 520 205 510" fill="none" stroke="%23ff0000" stroke-width="2"/><circle cx="200" cy="60" r="15" fill="%23ff0000" opacity="0.3"/><rect x="120" y="70" width="30" height="30" fill="%23ff006e" opacity="0.2" transform="rotate(20 135 85)"/><text x="250" y="100" font-size="12" fill="%23ff0000" font-family="monospace">HACK</text><text x="80" y="200" font-size="10" fill="%23ff3333" font-family="monospace">ROOT</text><text x="280" y="350" font-size="14" fill="%23ff4444" font-family="monospace">PWNED</text><text x="100" y="450" font-size="11" fill="%23ff006e" font-family="monospace">0DAY</text></svg>') center/cover no-repeat;
             pointer-events: none;
             z-index: 0;
         }
@@ -46,13 +46,13 @@
             background: repeating-linear-gradient(0deg, 
                 transparent, 
                 transparent 2px, 
-                rgba(0, 255, 136, 0.03) 2px, 
-                rgba(0, 255, 136, 0.03) 4px);
+                rgba(255, 0, 0, 0.03) 2px, 
+                rgba(255, 0, 0, 0.03) 4px);
             animation: matrix-rain 20s linear infinite;
             pointer-events: none;
             z-index: 0;
             font-size: 12px;
-            color: rgba(0, 255, 136, 0.05);
+            color: rgba(255, 0, 0, 0.05);
             white-space: pre;
             line-height: 1;
             overflow: hidden;
@@ -68,7 +68,7 @@
             padding: 40px 20px 20px;
             background: rgba(255, 255, 255, 0.03);
             border-bottom: 2px solid;
-            border-image: linear-gradient(to right, #00ff88, #00b4d8, #ff006e) 1;
+            border-image: linear-gradient(to right, #ff0000, #ff3333, #ff006e) 1;
             position: relative;
             z-index: 1;
         }
@@ -77,8 +77,8 @@
             width: 110px;
             height: 110px;
             border-radius: 50%;
-            border: 4px solid #00ff88;
-            box-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+            border: 4px solid #ff0000;
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
             margin: 0 auto 15px;
             background: #1a1a2e;
             display: flex;
@@ -99,7 +99,7 @@
 
         .header h1 {
             font-size: 2.2em;
-            background: linear-gradient(to left, #00ff88, #00b4d8);
+            background: linear-gradient(to left, #ff0000, #ff3333);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 5px;
@@ -107,7 +107,7 @@
         }
 
         .header .title {
-            color: #00b4d8;
+            color: #ff3333;
             font-size: 1em;
             letter-spacing: 2px;
         }
@@ -132,15 +132,15 @@
         }
 
         .card:hover {
-            border-color: #00ff88;
-            box-shadow: 0 8px 30px rgba(0, 255, 136, 0.15);
+            border-color: #ff0000;
+            box-shadow: 0 8px 30px rgba(255, 0, 0, 0.15);
         }
 
-        .card.about h2 { color: #00ff88; }
-        .card.skills h2 { color: #00b4d8; }
+        .card.about h2 { color: #ff0000; }
+        .card.skills h2 { color: #ff3333; }
         .card.hacking h2 { color: #ff006e; }
-        .card.quotes h2 { color: #ffbe0b; }
-        .card.contact h2 { color: #ffbe0b; }
+        .card.quotes h2 { color: #ff0000; }
+        .card.contact h2 { color: #ff4444; }
 
         .card h2 {
             font-size: 1.5em;
@@ -163,25 +163,25 @@
         }
 
         .skill-tag {
-            background: rgba(0, 180, 216, 0.2);
-            color: #00b4d8;
+            background: rgba(255, 0, 0, 0.2);
+            color: #ff3333;
             padding: 8px 18px;
             border-radius: 25px;
             font-size: 0.9em;
-            border: 1px solid rgba(0, 180, 216, 0.4);
+            border: 1px solid rgba(255, 0, 0, 0.4);
             transition: 0.3s;
         }
 
         .skill-tag:hover {
-            background: rgba(0, 255, 136, 0.3);
-            border-color: #00ff88;
-            color: #00ff88;
-            box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+            background: rgba(255, 0, 0, 0.3);
+            border-color: #ff0000;
+            color: #ff0000;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
         }
 
         .hack-box {
-            background: rgba(255, 0, 110, 0.08);
-            border-right: 4px solid #ff006e;
+            background: rgba(255, 0, 0, 0.08);
+            border-right: 4px solid #ff0000;
             padding: 15px 20px;
             border-radius: 0 10px 10px 0;
             margin: 15px 0;
@@ -200,8 +200,8 @@
 
         /* عبارات الهاكر */
         .hacker-quote {
-            background: rgba(255, 190, 11, 0.08);
-            border-left: 4px solid #ffbe0b;
+            background: rgba(255, 0, 0, 0.08);
+            border-left: 4px solid #ff0000;
             padding: 18px 25px;
             margin: 15px 0;
             border-radius: 10px 0 0 10px;
@@ -212,20 +212,20 @@
         }
 
         .hacker-quote:hover {
-            background: rgba(255, 190, 11, 0.15);
-            border-left-color: #ff006e;
-            box-shadow: 0 5px 20px rgba(255, 0, 110, 0.2);
+            background: rgba(255, 0, 0, 0.15);
+            border-left-color: #ff4444;
+            box-shadow: 0 5px 20px rgba(255, 0, 0, 0.2);
         }
 
         .hacker-quote .quote-text {
-            color: #ffbe0b;
+            color: #ff3333;
             font-weight: bold;
             display: block;
             margin-bottom: 5px;
         }
 
         .hacker-quote .quote-author {
-            color: #888;
+            color: #ff6666;
             font-size: 0.8em;
             font-style: italic;
         }
@@ -238,7 +238,7 @@
             margin-top: 15px;
             font-family: 'Courier New', monospace;
             font-size: 0.85em;
-            color: #00ff88;
+            color: #ff0000;
             overflow-x: auto;
             position: relative;
         }
@@ -250,8 +250,8 @@
             margin-bottom: 10px;
         }
 
-        .command { color: #00b4d8; }
-        .output { color: #888; }
+        .command { color: #ff3333; }
+        .output { color: #ff6666; }
 
         .contact-links {
             display: flex;
@@ -261,18 +261,18 @@
         }
 
         .contact-links a {
-            background: rgba(255, 190, 11, 0.15);
-            color: #ffbe0b;
+            background: rgba(255, 0, 0, 0.15);
+            color: #ff4444;
             text-decoration: none;
             padding: 10px 20px;
             border-radius: 25px;
-            border: 1px solid rgba(255, 190, 11, 0.3);
+            border: 1px solid rgba(255, 0, 0, 0.3);
             transition: 0.3s;
             display: inline-block;
         }
 
         .contact-links a:hover {
-            background: #ffbe0b;
+            background: #ff0000;
             color: #000;
         }
 
@@ -303,7 +303,7 @@
             content: "▸";
             position: absolute;
             right: 0;
-            color: #00ff88;
+            color: #ff0000;
         }
 
         .blink {
@@ -320,7 +320,7 @@
             font-size: 3em;
             text-align: center;
             margin: 20px 0;
-            filter: drop-shadow(0 0 10px rgba(255, 0, 110, 0.5));
+            filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.5));
         }
     </style>
 </head>
@@ -349,7 +349,7 @@
 
         <!-- بطاقة العبارات القوية -->
         <div class="card quotes">
-            <h2>🔥 كـلـمـات تـحـرق</h2>
+            <h2>🔥 عقلية الهاكر</h2>
             
             <div class="hacker-quote">
                 <span class="quote-text">"لا تغتر بنفسك.. فثغرة واحدة كفيلة بأن تسقط إمبراطوريتك الرقمية."</span>
@@ -456,7 +456,7 @@
                 <span class="command">sqlmap -u "http://target.com/page.php?id=1" --dbs</span><br>
                 <span class="output">[INFO] testing connection to the target URL...</span><br>
                 <span class="output">[WARNING] the target is vulnerable!</span><br>
-                <span style="color:#ff006e;">root@kali:~# <span class="blink">▌</span></span>
+                <span style="color:#ff0000;">root@kali:~# <span class="blink">▌</span></span>
             </div>
 
             <p style="margin-top:15px; font-size:0.9em; color:#aaa;">
@@ -482,4 +482,4 @@
     </div>
 
 </body>
-            </html>
+                    </html>
