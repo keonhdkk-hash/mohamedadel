@@ -19,6 +19,48 @@
             color: #ffffff;
             line-height: 1.8;
             min-height: 100vh;
+            position: relative;
+        }
+
+        /* خلفية الهاكر */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" opacity="0.08"><path d="M200 50 C180 30 150 20 140 40 C130 60 140 90 160 100 C180 110 200 120 210 140 C220 160 230 180 220 200 C210 220 190 230 180 220 C170 210 165 190 155 180 C145 170 130 165 125 180 C120 195 130 210 145 220 C160 230 180 240 195 260 C210 280 220 300 230 320 C240 340 250 360 245 380 C240 400 220 410 210 400 C200 390 195 370 185 355 C175 340 160 330 150 340 C140 350 138 370 145 385 C152 400 170 415 185 430 C200 445 215 455 225 470 C235 485 240 500 235 515 C230 530 215 540 200 535 C185 530 175 515 165 500 C155 485 140 470 130 480 C120 490 125 510 135 525 C145 540 160 555 175 560 C190 565 200 555 205 545 C210 535 210 520 205 510" fill="none" stroke="%2300ff88" stroke-width="2"/><circle cx="200" cy="60" r="15" fill="%2300ff88" opacity="0.3"/><rect x="120" y="70" width="30" height="30" fill="%23ff006e" opacity="0.2" transform="rotate(20 135 85)"/><text x="250" y="100" font-size="12" fill="%2300ff88" font-family="monospace">HACK</text><text x="80" y="200" font-size="10" fill="%2300b4d8" font-family="monospace">ROOT</text><text x="280" y="350" font-size="14" fill="%23ffbe0b" font-family="monospace">PWNED</text><text x="100" y="450" font-size="11" fill="%23ff006e" font-family="monospace">0DAY</text></svg>') center/cover no-repeat;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* تأثير المطر الرقمي */
+        body::after {
+            content: "01001000 01100001 01100011 01101011 01001000 01100001 01100011 01101011 01001000 01100001 01100011 01101011";
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 200%;
+            background: repeating-linear-gradient(0deg, 
+                transparent, 
+                transparent 2px, 
+                rgba(0, 255, 136, 0.03) 2px, 
+                rgba(0, 255, 136, 0.03) 4px);
+            animation: matrix-rain 20s linear infinite;
+            pointer-events: none;
+            z-index: 0;
+            font-size: 12px;
+            color: rgba(0, 255, 136, 0.05);
+            white-space: pre;
+            line-height: 1;
+            overflow: hidden;
+        }
+
+        @keyframes matrix-rain {
+            0% { transform: translateY(-50%); }
+            100% { transform: translateY(0%); }
         }
 
         .header {
@@ -27,6 +69,8 @@
             background: rgba(255, 255, 255, 0.03);
             border-bottom: 2px solid;
             border-image: linear-gradient(to right, #00ff88, #00b4d8, #ff006e) 1;
+            position: relative;
+            z-index: 1;
         }
 
         .profile-pic {
@@ -41,6 +85,16 @@
             align-items: center;
             justify-content: center;
             font-size: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-pic::after {
+            content: "👤";
+            position: absolute;
+            font-size: 80px;
+            opacity: 0.15;
+            filter: blur(2px);
         }
 
         .header h1 {
@@ -49,6 +103,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 5px;
+            position: relative;
         }
 
         .header .title {
@@ -61,6 +116,8 @@
             max-width: 850px;
             margin: 30px auto;
             padding: 0 20px;
+            position: relative;
+            z-index: 1;
         }
 
         .card {
@@ -71,6 +128,7 @@
             padding: 25px;
             margin-bottom: 25px;
             transition: 0.3s;
+            position: relative;
         }
 
         .card:hover {
@@ -81,11 +139,20 @@
         .card.about h2 { color: #00ff88; }
         .card.skills h2 { color: #00b4d8; }
         .card.hacking h2 { color: #ff006e; }
+        .card.quotes h2 { color: #ffbe0b; }
         .card.contact h2 { color: #ffbe0b; }
 
         .card h2 {
             font-size: 1.5em;
             margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .card h2::after {
+            content: "_";
+            animation: blink 1s infinite;
+            color: inherit;
         }
 
         .skills-grid {
@@ -102,6 +169,14 @@
             border-radius: 25px;
             font-size: 0.9em;
             border: 1px solid rgba(0, 180, 216, 0.4);
+            transition: 0.3s;
+        }
+
+        .skill-tag:hover {
+            background: rgba(0, 255, 136, 0.3);
+            border-color: #00ff88;
+            color: #00ff88;
+            box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
         }
 
         .hack-box {
@@ -111,6 +186,48 @@
             border-radius: 0 10px 10px 0;
             margin: 15px 0;
             font-family: 'Courier New', monospace;
+            position: relative;
+        }
+
+        .hack-box::before {
+            content: "⚡";
+            position: absolute;
+            right: -12px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+        }
+
+        /* عبارات الهاكر */
+        .hacker-quote {
+            background: rgba(255, 190, 11, 0.08);
+            border-left: 4px solid #ffbe0b;
+            padding: 18px 25px;
+            margin: 15px 0;
+            border-radius: 10px 0 0 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .hacker-quote:hover {
+            background: rgba(255, 190, 11, 0.15);
+            border-left-color: #ff006e;
+            box-shadow: 0 5px 20px rgba(255, 0, 110, 0.2);
+        }
+
+        .hacker-quote .quote-text {
+            color: #ffbe0b;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .hacker-quote .quote-author {
+            color: #888;
+            font-size: 0.8em;
+            font-style: italic;
         }
 
         .terminal {
@@ -123,6 +240,7 @@
             font-size: 0.85em;
             color: #00ff88;
             overflow-x: auto;
+            position: relative;
         }
 
         .terminal::before {
@@ -165,6 +283,8 @@
             font-size: 0.85em;
             border-top: 1px solid rgba(255,255,255,0.05);
             margin-top: 20px;
+            position: relative;
+            z-index: 1;
         }
 
         ul {
@@ -175,6 +295,15 @@
 
         ul li {
             margin-bottom: 8px;
+            position: relative;
+            padding-right: 20px;
+        }
+
+        ul li::before {
+            content: "▸";
+            position: absolute;
+            right: 0;
+            color: #00ff88;
         }
 
         .blink {
@@ -184,6 +313,14 @@
         @keyframes blink {
             0%, 50% { opacity: 1; }
             51%, 100% { opacity: 0; }
+        }
+
+        /* تأثير الجمجمة */
+        .skull-icon {
+            font-size: 3em;
+            text-align: center;
+            margin: 20px 0;
+            filter: drop-shadow(0 0 10px rgba(255, 0, 110, 0.5));
         }
     </style>
 </head>
@@ -207,6 +344,72 @@
             <p style="margin-top:10px;">
                 🎯 هدفي: أساعد الشركات والأفراد في تأمين أنظمتهم قبل ما حد يوصلها.
             </p>
+            <div class="skull-icon">💀</div>
+        </div>
+
+        <!-- بطاقة العبارات القوية -->
+        <div class="card quotes">
+            <h2>🔥 كـلـمـات تـحـرق</h2>
+            
+            <div class="hacker-quote">
+                <span class="quote-text">"لا تغتر بنفسك.. فثغرة واحدة كفيلة بأن تسقط إمبراطوريتك الرقمية."</span>
+                <span class="quote-author">— قانون الهاكر الأول</span>
+            </div>
+
+            <div class="hacker-quote">
+                <span class="quote-text">"كل سطر كود تكتبه هو سلاح ذو حدين.. إما أن يحميك أو يكون بابًا لعدوك."</span>
+                <span class="quote-author">— حكمة في الأمن السيبراني</span>
+            </div>
+
+            <div class="hacker-quote">
+                <span class="quote-text">"الأمان المطلق وهم.. والأذكى من يكتشف ثغراته قبل غيره."</span>
+                <span class="quote-author">— من أقوال الهاكرز</span>
+            </div>
+
+            <div class="hacker-quote">
+                <span class="quote-text">"لا تثق بأحد على الشبكة.. حتى نفسك حين تكون خلف شاشة."</span>
+                <span class="quote-author">— درس قاسٍ من الواقع</span>
+            </div>
+
+            <div class="hacker-quote">
+                <span class="quote-text">"الهاكر الحقيقي لا يتباهى بما يعرف.. بل يرتعد خوفًا مما يجهل."</span>
+                <span class="quote-author">— فلسفة القبعة السوداء</span>
+            </div>
+
+            <div class="hacker-quote">
+                <span class="quote-text">"نحن لا نكسر الأنظمة.. نكشف حقيقة أنها كانت مكسورة منذ البداية."</span>
+                <span class="quote-author">— اعتراف هاكر أخلاقي</span>
+            </div>
+
+            <div class="hacker-quote">
+                <span class="quote-text">"في عالم السايبر، الغرور أول خطوة نحو الهاوية.. والتواضع أول خطوة نحو الإتقان."</span>
+                <span class="quote-author">— قاعدة ذهبية</span>
+            </div>
+
+            <div class="hacker-quote">
+                <span class="quote-text">"لا تسألني كيف أخترق.. اسأل نفسك لماذا أنت غير محمي."</span>
+                <span class="quote-author">— رد على ساذج</span>
+            </div>
+
+            <div class="hacker-quote">
+                <span class="quote-text">"كلما زاد علمك.. كلما أدركت حجم جهلك. هذه لعنة الهاكر."</span>
+                <span class="quote-author">— حقيقة مرة</span>
+            </div>
+
+            <div class="hacker-quote">
+                <span class="quote-text">"أنا لا أخترع الثغرات.. أنا فقط أجد ما تركوه خلفهم."</span>
+                <span class="quote-author">— هاكر متواضع</span>
+            </div>
+
+            <div class="hacker-quote">
+                <span class="quote-text">"الفرق بيني وبين المجرم الإلكتروني؟ أنا أطرق بابك لأخبرك أنه مفتوح."</span>
+                <span class="quote-author">— تعريف الاختراق الأخلاقي</span>
+            </div>
+
+            <div class="hacker-quote">
+                <span class="quote-text">"لا تستهن بعدو رقمي.. فخصمك قد يكون طفلاً في الرابعة عشرة خلف شاشة."</span>
+                <span class="quote-author">— تحذير للشركات</span>
+            </div>
         </div>
 
         <div class="card skills">
@@ -279,4 +482,4 @@
     </div>
 
 </body>
-  </html>
+            </html>
